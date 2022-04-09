@@ -15,9 +15,6 @@ public class Usuario {
 	private String email;
 	private String senha;
 
-	public Usuario(String string, String string2, String string3) {
-		// TODO Auto-generated constructor stub
-	}
 
 	@Override
 	public boolean equals(Object obj) {
