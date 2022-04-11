@@ -1,11 +1,16 @@
 package br.com.lawd.gestao.controller.form;
 
+import com.sun.istack.NotNull;
+
 import br.com.lawd.gestao.modelo.Usuario;
 
 public class UsuarioForm {
-	
+	@NotNull
+	//falta acrescentar @NotEmpty e @Length(min = 5) NÃO ESTA CRIANDO O IMPORT
 	private String nome;
+	@NotNull
 	private String email;
+	@NotNull
 	private String senha;
 	public String getNome() {
 		return nome;
