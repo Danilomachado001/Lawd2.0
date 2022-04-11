@@ -19,6 +19,7 @@ public class Produto {
 	private String codigoDeBarras;
 	private String precoDeFabrica;
 	private String precoDeVenda;
+	private String precoPromocional;
 	private String observação;
 	private LocalDateTime dataCriacao;
 	private Usuario usuario;
@@ -188,6 +189,18 @@ public class Produto {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+
+
+	public String getPrecoPromocional() {
+		return precoPromocional;
+	}
+
+
+
+	public void setPrecoPromocional(String precoPromocional) {
+		this.precoPromocional = precoPromocional;
 	}
 	
 
