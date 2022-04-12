@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 public class Produto {
 	
@@ -25,9 +26,8 @@ public class Produto {
 	private Usuario usuario;
 		
 	
-	public Produto() {
+	public Produto(@NotEmpty String descricao2, @NotEmpty String precoDeVenda2) {
 	}
-	
 
 	
 	public Long getId() {
