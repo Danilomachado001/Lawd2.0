@@ -2,11 +2,13 @@ package br.com.lawd.gestao.modelo;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
+@Entity
 public class Produto {
 	
 	@Id
@@ -23,10 +25,10 @@ public class Produto {
 	private String precoPromocional;
 	private String observação;
 	private LocalDateTime dataCriacao;
-	private Usuario usuario;
+	//private Usuario usuario;
 		
 	
-	public Produto(@NotEmpty String descricao2, @NotEmpty String precoDeVenda2) {
+	public Produto(@NotEmpty String descricao, @NotEmpty String precoDeVenda) {
 	}
 
 	
@@ -162,7 +164,7 @@ public class Produto {
 
 
 
-	public Usuario getUsuario() {
+	/*public Usuario getUsuario() {
 		return usuario;
 	}
 
@@ -170,7 +172,7 @@ public class Produto {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}
+	}*/
 
 
 
