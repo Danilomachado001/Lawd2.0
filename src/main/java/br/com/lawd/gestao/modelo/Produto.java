@@ -25,11 +25,13 @@ public class Produto {
 	private String precoDeFabrica;
 	private String precoDeVenda;
 	private String precoPromocional;
-	private String observação;
+	private String observacao;
 	//private LocalDateTime dataCriacao;
 	@ManyToOne
 	private Usuario usuario;
 		
+	public Produto() {
+	}
 	
 	public Produto(@NotEmpty String descricao, @NotEmpty String precoDeVenda) {
 	}
@@ -142,13 +144,13 @@ public class Produto {
 
 
 	public String getObservação() {
-		return observação;
+		return observacao;
 	}
 
 
 
 	public void setObservação(String observação) {
-		this.observação = observação;
+		this.observacao = observação;
 	}
 
 
