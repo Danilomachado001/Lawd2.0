@@ -30,7 +30,7 @@ public class DetalhesDoProdutoDto {
 			this.precoDeVenda = produto.getPrecoDeVenda();
 			this.precoPromocional = produto.getPrecoPromocional();
 			this.observação = produto.getObservação();
-			this.dataCriacao = produto.getDataCriacao();
+	//		this.dataCriacao = produto.getDataCriacao();
 			
 			
 			

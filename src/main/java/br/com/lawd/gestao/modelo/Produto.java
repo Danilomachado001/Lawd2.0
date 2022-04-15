@@ -1,11 +1,12 @@
 package br.com.lawd.gestao.modelo;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
@@ -15,7 +16,8 @@ public class Produto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String descricao;
-	//private StatusDoProduto status; CRIAR CLASSE ENUM PARA ATIVO/INATIVO
+	@Enumerated(EnumType.STRING)
+	private StatusProduto status = StatusProduto.ATIVO;
 	private String fabricante;
 	private String marca;
 	private String familia;
@@ -24,8 +26,9 @@ public class Produto {
 	private String precoDeVenda;
 	private String precoPromocional;
 	private String observação;
-	private LocalDateTime dataCriacao;
-	//private Usuario usuario;
+	//private LocalDateTime dataCriacao;
+	@ManyToOne
+	private Usuario usuario;
 		
 	
 	public Produto(@NotEmpty String descricao, @NotEmpty String precoDeVenda) {
@@ -56,15 +59,13 @@ public class Produto {
 
 
 
-//	public StatusDoProduto getStatus() {
-//		return status;
-//	}
-//
-//
-//
-//	public void setStatus(StatusDoProduto status) {
-//		this.status = status;
-//	}
+	public StatusProduto getStatus() {
+		return status;
+	}
+
+	public void setStatus(StatusProduto status) {
+		this.status = status;
+	}
 
 
 
@@ -152,7 +153,7 @@ public class Produto {
 
 
 
-	public LocalDateTime getDataCriacao() {
+	/*	public LocalDateTime getDataCriacao() {
 		return dataCriacao;
 	}
 
@@ -161,10 +162,10 @@ public class Produto {
 	public void setDataCriacao(LocalDateTime dataCriacao) {
 		this.dataCriacao = dataCriacao;
 	}
+*/
 
 
-
-	/*public Usuario getUsuario() {
+	public Usuario getUsuario() {
 		return usuario;
 	}
 
@@ -172,7 +173,7 @@ public class Produto {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
-	}*/
+	}
 
 
 
