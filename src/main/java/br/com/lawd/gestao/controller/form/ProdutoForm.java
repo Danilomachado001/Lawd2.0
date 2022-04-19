@@ -7,7 +7,6 @@ import org.hibernate.validator.constraints.Length;
 import com.sun.istack.NotNull;
 
 import br.com.lawd.gestao.modelo.Produto;
-import br.com.lawd.gestao.modelo.Usuario;
 
 public class ProdutoForm {
 	

@@ -30,6 +30,7 @@ public class Produto {
 	@ManyToOne
 	private Usuario usuario;
 		
+	
 	public Produto() {
 	}
 	
